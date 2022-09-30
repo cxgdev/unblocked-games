@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@supports (mask-image: paint(smooth-corners)) {
+    .el.is-loaded {
+      border-radius: 0;
+      mask-image: paint(smooth-corners);
+      --smooth-corners: 4;
+    }
+  }
+
+:root {
+    --mdc-theme-primary: #be4747;
+}
+
+.mdc-button__label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+}
+
+.mdc-button {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.mdc-card {
+    width: 300px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 200ms;
+}
+
+.mdc-card:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    transition-property: all;
+    transition-duration: 200ms;
+}
+
+.game-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+    padding: 64px;
+}
+
+.card--text-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    padding: 16px;
+}
+
+.card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: large;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.card-subhead {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    color: gray;
+}
+
+.card-developer {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 8pt;
+    color: gray;
+    margin-top: 16px;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 0;
+    margin: 16px;
+    padding: 32px;
+}
+
+embed {
+    overflow: hidden;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 75%;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.game-container__info {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 16px;
+    align-items: flex-start;
+}
+
+.game-container__info-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18pt;
+    font-weight: 700;
+    color: black;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.game-container__info-paragraph {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14pt;
+    font-weight: 400;
+    color: black;
+}
+
+.game-container__info-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14pt;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+}
+
+body {
+    margin: 0px;
+    background-color: #F5F0F6;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    column-gap: 150px;
+    align-items: center;
+    height: 70px;
+    background-color: #2176FF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar > div {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    column-gap: 8px;
+}
+
+.hero {
+    display: flex;
+    height: 35vh;
+    margin: 0 0 0 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid;
+}
+
+.hero > h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.fullscreen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.game-card {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    transition: all 0.25s ease-out 100ms;
+    bottom: 0;
+    background-size: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+    border-radius: 32px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.game-card:hover {
+    bottom: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}

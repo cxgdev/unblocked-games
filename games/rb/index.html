@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="../../styles.css">
+    <title>game index</title>
+
+    <style>
+        body {
+            background: "#0";
+            color: #cccccc;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        canvas {
+            image-rendering: optimizeSpeed;
+            -webkit-interpolation-mode: nearest-neighbor;
+            -ms-touch-action: none;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        :-webkit-full-screen #canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        div.gm4html5_div_class {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        /* START - Login Dialog Box */
+        div.gm4html5_login {
+            padding: 20px;
+            position: absolute;
+            border: solid 2px #000000;
+            background-color: #404040;
+            color: #00ff00;
+            border-radius: 15px;
+            box-shadow: #101010 20px 20px 40px;
+        }
+
+        div.gm4html5_cancel_button {
+            float: right;
+        }
+
+        div.gm4html5_login_button {
+            float: left;
+        }
+
+        div.gm4html5_login_header {
+            text-align: center;
+        }
+
+        /* END - Login Dialog Box */
+        :-webkit-full-screen {
+            width: 100%;
+            height: 100%;
+        }
+
+        .dev-name {
+            position: absolute;
+            top: auto;
+            right: auto;
+            left: 10pt;
+            bottom: 10pt;
+            color: rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../../navbar.js"></script>
+    <div class="container">
+        <div class="game-container" id="gm4html5_div_id">
+            <iframe frameborder="0" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true"
+                oallowfullscreen="true" msallowfullscreen="true" type="text/html" src="./game/index.html"
+                id="game-iframe" style="aspect-ratio: 16 / 9;" width="100%"></iframe>
+            <div class="game-container__info">
+                <button class="mdc-button mdc-button--raised" id="fullscreen">
+                    <span class="mdc-button__ripple"></span>
+                    <span class="mdc-button__label">FULLSCREEN</span>
+                </button>
+                <span class="game-container__info-heading" id="game-title"></span>
+                <span class="game-container__info-description" id="game-dev"></span>
+                <span class="game-container__info-heading">Description</span>
+                <span class="game-container__info-paragraph" id="game-description"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../material.js"></script>
+    <script src="../../game-scripts.js"></script>
+    <script>
+        fetch("./game.json")
+            .then(response => {
+                console.log(response);
+                document.getElementById('game-title').innerText = response.title;
+                document.getElementById('game-dev').innerText = response.developer;
+                document.getElementById('game-description').innerText = response.description;
+            })
+    </script>
+</body>
+</html>

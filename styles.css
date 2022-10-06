@@ -157,7 +157,7 @@ body {
     column-gap: 8px;
 }
 
-.navbar h1 {
+.navbar div h1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: large;
     font-weight: 800;

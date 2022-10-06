@@ -110,9 +110,9 @@
         fetch("./game.json")
             .then(response => {
                 console.log(response);
-                document.getElementById('game-title').innerText = response.title;
-                document.getElementById('game-dev').innerText = response.developer;
-                document.getElementById('game-description').innerText = response.description;
+                document.getElementById('game-title').innerText = response.data.title;
+                document.getElementById('game-dev').innerText = response.data.developer;
+                document.getElementById('game-description').innerText = response.data.description;
             })
     </script>
 </body>

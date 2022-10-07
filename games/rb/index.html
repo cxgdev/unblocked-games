@@ -96,24 +96,15 @@
                     <span class="mdc-button__ripple"></span>
                     <span class="mdc-button__label">FULLSCREEN</span>
                 </button>
-                <span class="game-container__info-heading" id="game-title"></span>
-                <span class="game-container__info-description" id="game-dev"></span>
+                <span class="game-container__info-heading" id="game-title">Retro Bowl</span>
+                <span class="game-container__info-description" id="game-dev">New Star Games</span>
                 <span class="game-container__info-heading">Description</span>
-                <span class="game-container__info-paragraph" id="game-description"></span>
+                <span class="game-container__info-paragraph" id="game-description">Retro Bowl is an American style football game created by New Star Games. Are you ready to manage your dream team into victory? Be the boss of your NFL franchise, expand your roster, take care of your press duties to keep your team and fans happy.</span>
             </div>
         </div>
     </div>
 
     <script src="../../material.js"></script>
     <script src="../../game-scripts.js"></script>
-    <script>
-        fetch("./game.json")
-            .then(response => {
-                console.log(response);
-                document.getElementById('game-title').innerText = response.data.title;
-                document.getElementById('game-dev').innerText = response.data.developer;
-                document.getElementById('game-description').innerText = response.data.description;
-            })
-    </script>
 </body>
 </html>

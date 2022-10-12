@@ -193,8 +193,8 @@ body {
 }
 
 .game-card {
-    width: 200px;
-    height: 200px;
+    width: 125px;
+    height: 125px;
     display: flex;
     position: relative;
     aspect-ratio: 1 / 1;
@@ -212,7 +212,12 @@ body {
 }
 
 .game-card:hover {
-    bottom: 8px;
+    transform: scaleX(1.2) scaleY(1.2);
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
     color: rgba(0, 0, 0, 1);
+}
+
+.game-card span {
+    color: white;
+    text-decoration: none;
 }

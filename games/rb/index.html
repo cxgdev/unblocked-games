@@ -72,15 +72,6 @@
             width: 100%;
             height: 100%;
         }
-
-        .dev-name {
-            position: absolute;
-            top: auto;
-            right: auto;
-            left: 10pt;
-            bottom: 10pt;
-            color: rgba(0, 0, 0, 0.25);
-        }
     </style>
 </head>
 
@@ -92,14 +83,14 @@
                 oallowfullscreen="true" msallowfullscreen="true" type="text/html" src="./game/index.html"
                 id="game-iframe" style="aspect-ratio: 16 / 9;" width="100%"></iframe>
             <div class="game-container__info">
+                <div class="game-container__info-text">
+                    <span class="game-container__info-heading" id="game-title">Retro Bowl</span>
+                    <span class="game-container__info-description" id="game-dev">by New Star Games</span>
+                </div>
                 <button class="mdc-button mdc-button--raised" id="fullscreen">
                     <span class="mdc-button__ripple"></span>
                     <span class="mdc-button__label">FULLSCREEN</span>
                 </button>
-                <span class="game-container__info-heading" id="game-title">Retro Bowl</span>
-                <span class="game-container__info-description" id="game-dev">New Star Games</span>
-                <span class="game-container__info-heading">Description</span>
-                <span class="game-container__info-paragraph" id="game-description">Retro Bowl is an American style football game created by New Star Games. Are you ready to manage your dream team into victory? Be the boss of your NFL franchise, expand your roster, take care of your press duties to keep your team and fans happy.</span>
             </div>
         </div>
     </div>

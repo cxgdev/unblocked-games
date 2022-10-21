@@ -109,7 +109,13 @@ embed {
     row-gap: 8px;
     width: 75%;
     padding: 16px;
-    align-items: flex-start;
+    align-items: space-around;
+}
+
+.game-container__info__text {
+    display: flex;
+    flex-direction: row;
+    row-gap 16px;
 }
 
 .game-container__info-heading {

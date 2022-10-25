@@ -109,7 +109,7 @@ embed {
     row-gap: 8px;
     width: 75%;
     padding: 16px;
-    align-content: space-around;
+    align-content: space-between;
 }
 
 .game-container__info__text {

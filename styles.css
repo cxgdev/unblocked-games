@@ -172,8 +172,7 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: large;
     font-weight: 800;
-    color: rgb(0, 0, 0);
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -208,9 +207,10 @@ body {
     height: 125px;
     display: flex;
     position: relative;
+    padding: 8px;
     aspect-ratio: 1 / 1;
     cursor: pointer;
-    transition: all 0.25s ease-out 100ms;
+    transition: all 0.25s ease-out 50ms;
     bottom: 0;
     background-size: 100%;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
@@ -223,12 +223,13 @@ body {
 }
 
 .game-card:hover {
-    transform: scaleX(1.2) scaleY(1.2);
+    transform: scaleX(1.025) scaleY(1.025);
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
     color: rgba(0, 0, 0, 1);
 }
 
 .game-card span {
     color: white;
+    font-size: 14px;
     text-decoration: none;
 }

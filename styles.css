@@ -18,7 +18,8 @@
 }
 
 .mdc-button {
-    border-radius: 8px;
+    border-radius: 30px;
+    box-shadow: none;
     overflow: hidden;
 }
 

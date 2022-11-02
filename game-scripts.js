@@ -53,7 +53,7 @@ gameEmbed.setAttribute("style", "aspect-ratio: 16 / 9;");
 gameEmbed.setAttribute("width", "100%");
 
 // Game Info
-var infoContainer = document.createElement('div');
+var infoContainebbr = document.createElement('div');
 infoContainer.classList.add("game-container__info");
 var infoTextContainer = document.createElement('div');
 infoContainer.classList.add("game-container__info__text");

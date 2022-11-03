@@ -31,15 +31,16 @@ fetch('./game.json')
         title = data.tile;
         developer = data.developer;
     });
+/*
+FALLBACK
 
 document.open();
 document.write(`<div class="container"><div class="game-container" id="gm4html5_div_id"><iframe frameborder="0" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" type="text/html" src="./game/index.html" id="game-iframe" style="aspect-ratio: 16 / 9;" width="100%"></iframe><div class="game-container__info"><div class="game-container__info__text"><span class="game-container__info-heading" id="game-title">${title}</span><span class="game-container__info-description" id="game-dev">by ${developer}</span></div><button class="mdc-button mdc-button--raised" id="fullscreen"><span class="mdc-button__ripple"></span><span class="mdc-button__label">FULLSCREEN</span></button></div></div></div>`);
 document.close();
+*/
 
-/*
 // Main Container
-var container = document.createElement('div');
-container.classList.add('container');
+var container = document.getElementById('container');
 // Game Container
 var gameContainer = document.createElement('div');
 container.classList.add('game-container');
@@ -84,9 +85,6 @@ infoContainer.appendChild(fullscreenButton);
 gameContainer.appendChild(gameEmbed);
 gameContainer.appendChild(infoContainer);
 container.appendChild(gameContainer);
-
-document.body.appendChild(container);
-*/
 
 fullscreenButton.addEventListener("click", () => {
     if (gameEmbed.requestFullscreen) {

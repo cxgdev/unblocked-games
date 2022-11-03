@@ -116,7 +116,7 @@ embed {
 .game-container__info__text {
     display: flex;
     flex-direction: column;
-    row-gap 4px;
+    row-gap: 4px;
 }
 
 .game-container__info-heading {
@@ -211,26 +211,38 @@ body {
     padding: 8px;
     aspect-ratio: 1 / 1;
     cursor: pointer;
-    transition: all 0.25s ease-out 50ms;
+    transition: all 0.35s ease-out 0ms;
     bottom: 0;
     background-size: 100%;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
     color: rgba(0, 0, 0, 0);
-    border-radius: 16px;
+    border-radius: 24px;
     overflow: hidden;
     justify-content: center;
     align-items: flex-end;
     text-decoration: none;
+    mask-image: paint(smooth-corners);
+    mask-repeat: none;
 }
 
 .game-card:hover {
-    transform: scaleX(1.05) scaleY(1.025);
+    transform: scaleX(1.075) scaleY(1.075);
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
     color: rgba(0, 0, 0, 1);
 }
 
 .game-card span {
+    position: relative;
+    bottom: -8px;
+    color: transparent;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.25s ease-out 50ms;
+}
+
+.game-card:hover span {
     color: white;
-    font-size: 18px;
+    bottom: 0px;
+    font-size: 16px;
     text-decoration: none;
 }

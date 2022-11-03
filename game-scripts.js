@@ -1,6 +1,3 @@
-let title;
-let developer;
-
 var titleText = document.getElementById("game-title");
 var devText = document.getElementById("game-dev");
 

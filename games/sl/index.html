@@ -1,55 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="TemplateData/unityloader41.js"></script>
-    <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/slope.json", { onProgress: UnityProgress, Module: { onRuntimeInitialized: function() { UnityProgress(gameInstance, "complete") } } });
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2541434264715219"
-     crossorigin="anonymous"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2541434264715219"
-     crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="description" content="Slope Game unblocked by @cxgdev. Available on GitHub and GitHub pages">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="../../styles.css">
+    <title>SLO Unblocked | CXG</title>
+
     <style>
-        .alert {
-          padding: 20px;
-          background-color: #04AA6D;
-          color: white;
+        body {
+            background: "#0";
+            color: #cccccc;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
         }
 
-        .closebtn {
-          margin-left: 15px;
-          color: white;
-          p {text-align: center;}  
-          font-weight: bold;
-          float: right;
-          font-size: 22px;
-          line-height: 20px;
-          cursor: pointer;
-          transition: 0.3s;
+        canvas {
+            -ms-touch-action: none;
+            touch-action: none;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
         }
 
-        .closebtn:hover {
-          color: black;
+        :-webkit-full-screen #canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        div.gm4html5_div_class {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        /* START - Login Dialog Box */
+        div.gm4html5_login {
+            padding: 20px;
+            position: absolute;
+            border: solid 2px #000000;
+            background-color: #404040;
+            color: #00ff00;
+            border-radius: 15px;
+            box-shadow: #101010 20px 20px 40px;
+        }
+
+        div.gm4html5_cancel_button {
+            float: right;
+        }
+
+        div.gm4html5_login_button {
+            float: left;
+        }
+
+        div.gm4html5_login_header {
+            text-align: center;
+        }
+
+        /* END - Login Dialog Box */
+        :-webkit-full-screen {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 
-<!--- 
-Want to run or host yourself? Check out the source? 
-https://github.com/cgolden15/Slope-Game/ 
-
-Drop a star on the repo if you enjoy.
---->
-
-<body style="margin: 0; overflow: hidden;">
-    <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        NEW! Play tetris unblocked at <a href="https://goldendev.tech/tetris">https://goldendev.tech/tetris</a> !
+<body>
+    <script src="../../navbar.js"></script>
+    <div class="container">
+        <div class="game-container" id="gm4html5_div_id">
+            <iframe frameborder="0" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true"
+                oallowfullscreen="true" msallowfullscreen="true" type="text/html" src="./game/index.html"
+                id="game-iframe" style="aspect-ratio: 16 / 9;" width="100%"></iframe>
+            <div class="game-container__info">
+                <div class="game-container__info__text">
+                    <span class="game-container__info-heading" id="game-title">Slope</span>
+                    <span class="game-container__info-description" id="game-dev">by Y8</span>
+                </div>
+                <button class="mdc-button mdc-button--raised" id="fullscreen">
+                    <span class="mdc-button__ripple"></span>
+                    <span class="mdc-button__label">FULLSCREEN</span>
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="webgl-content">
-        <div id="gameContainer" style="width: 100%; height: 100%; margin: 0;"></div>
-    </div>
-    <script async src="//static.getclicky.com/101357250.js"></script>
-    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101357250ns.gif" /></p></noscript>
+    <script src="../../game-scripts.js"></script>
+    <script src="../../material.js"></script>
 </body>
-<!-- Slope game by y8 games, not me.-->
+</html>

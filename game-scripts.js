@@ -5,7 +5,7 @@ fetch('./game.json')
     .then(response => response.json())
     .then(data => {
         titleText.innerHTML = data.title;
-        devText.innerHTML = data.developer;
+        devText.innerHTML = `by ${data.developer}`;
     });
 
 var fullscreenButton = document.getElementById("fullscreen");

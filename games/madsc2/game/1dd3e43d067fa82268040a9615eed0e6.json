@@ -1,0 +1,16 @@
+{
+"companyName": "Madalin Games",
+"productName": "Madalin Stunt Cars 2",
+"productVersion": "2.7.3",
+"dataUrl": "a7dc5454f35995277f171580be89b7f3.unityweb",
+"wasmCodeUrl": "48ba59911d911439cdc00f955a0bbe40.unityweb",
+"wasmFrameworkUrl": "25f3e8828108b7445548ac6a2edb5ba4.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "821652a7ba86ba5731dc5409d399d903.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.21f1"
+}
